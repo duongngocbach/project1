@@ -1,0 +1,88 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+}
+.Table {
+  position: absolute;
+  margin-top: 80px;
+}
+
+td {
+    border: 1px solid #0e0e0e;
+    text-align: left;
+    padding: 3px;
+}
+th {
+    background-color: cadetblue;
+    border: 1px solid #3f3c3c;
+    text-align: center;
+    padding: 5px;
+}
+
+.buttonAdd {
+  position:absolute;
+  left: 5%;
+  margin: 20px;
+  width: 100px;
+  background-color: #135ce3;
+  color: #131212;
+  padding: 5px 5px;
+  font-size: 15px;
+  font-weight: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonChange, .buttonDelete {
+  margin: 0px;
+  width: 70px;
+  background-color: #279dbe;
+  color: #131212;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ec1212;
+}
+
+/* css for pagination */
+
+.navigationButtons {
+    width: 50%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+  }
+   
+  .navigationButtons a {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: red;
+    cursor: pointer;
+  }
+   
+  .navigationButtons a:hover {
+    color: white;
+    background-color: red;
+  }
+   
+  .navigationActive a {
+    color: white;
+    background-color: red;
+  }
+   
+  .navigationDisabled a {
+    color: white;
+    background-color: grey;
+  }
