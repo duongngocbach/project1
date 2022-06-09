@@ -4,10 +4,6 @@ table {
     border-collapse: collapse;
     width:100%;
 }
-.Table {
-  position: absolute;
-  margin-top: 80px;
-}
 
 td {
     border: 1px solid #0e0e0e;
@@ -22,17 +18,40 @@ th {
 }
 
 .buttonAdd {
-  position:absolute;
-  left: 5%;
-  margin: 20px;
+  margin-top: 50px;
   width: 100px;
-  background-color: #135ce3;
+  background-color: #5086e8;
   color: #131212;
   padding: 5px 5px;
   font-size: 15px;
   font-weight: 100px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.AddSearch {
+  display: flex;
+  height: 100px;
+}
+
+.AddDiv {
+  width: 50%;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.SearchDiv {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.SearchIcon {
+  font-size: 25px;
+}
+
+.SearchInput {
+  width: 30%;
+  margin-right: 5px;
 }
 
 .buttonChange, .buttonDelete {

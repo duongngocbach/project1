@@ -3,7 +3,7 @@
     display: flex;
     background-color: rgb(24, 195, 225);
     height: 80px;
-    margin: 10px;
+    /* margin: 10px; */
     /* justify-content: center; */
     align-items: center;
     font-size: 20px;
@@ -24,6 +24,11 @@
 
 .Nav {
     color: black;
+    margin: 10px;
+}
+
+.Name{
+    color: red;
     margin: 10px;
 }
 

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import styles from './Login.module.css'
+import Header from '../Header/Header';
 
 function Login(){
 
@@ -24,9 +25,11 @@ function Login(){
                     'password': input_password
                 })
                 .then(function(res){
-                    // console.log(res)
+                    console.log(res)
                     if (res.status == 200){
-                        sessionStorage.setItem('user_permission',res.data)
+                        sessionStorage.setItem('user_info', res.data[0])
+                        sessionStorage.setItem('user_group', res.data[1])
+                        sessionStorage.setItem('user_permission', res.data[2])
                         navigate('/home')
                     } else{
                         alert("Tài khoản không tồn tại")
@@ -36,13 +39,14 @@ function Login(){
 
     return(
         <div>
+            <Header />
             <form className={styles.form}>
                 <h3 className={styles.formName}>Welcome!</h3>
 
-                <label className={styles.label} for="username">Username:</label>
+                <label className={styles.label} htmlFor="username">Username:</label>
                 <input className={styles.input} type="text" id="username" value={input_username} onChange={(e) => {setUsername(e.target.value)}} />
 
-                <label className={styles.label} for="password">Password:</label>
+                <label className={styles.label} htmlFor="password">Password:</label>
                 <input className={styles.input} type="password" id="password" value={input_password} onChange={(e) => {setPassword(e.target.value)}} />
 
                 <button className={styles.button} onClick={handleLogin} > Login </button>
