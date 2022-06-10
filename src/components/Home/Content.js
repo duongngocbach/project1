@@ -88,6 +88,7 @@ function Content() {
         .then(function(record){
             setPost(record.data)   
         });
+
     },[dataSearch])
 
     return(
